@@ -6,4 +6,4 @@ before_install:
   - docker build -t shaharkeren/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run shaharkeren/docker-react npm run test -- --coverage
+  - docker run -e CI=true shaharkeren/docker-react npm run test
